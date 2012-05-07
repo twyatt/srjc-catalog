@@ -9,7 +9,7 @@ class Notifier {
 	
 	public function notify($name, $data) {
 		$message = $this->getMessage($name, $data);
-		mail($this->to, $name, $message);
+		return mail($this->to, $name, $message);
 	}
 	
 	public function getMessage($name, $data) {
