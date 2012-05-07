@@ -2,7 +2,7 @@
 require('notifier.php');
 require('catalog.php');
 
-$notifier = new Notifier('travis.i.wyatt@gmail.com');
+$notifier = new Notifier('travis.i.wyatt@gmail.com', 'travis.i.wyatt@gmail.com');
 
 $catalog = new Catalog('https://portal.santarosa.edu/SRWeb/SR_ScheduleOfClasses.aspx?termid=20125');
 $catalog->userAgent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.7; rv:12.0) Gecko/20100101 Firefox/12.0';

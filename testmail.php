@@ -1,7 +1,7 @@
 <?php
 require('notifier.php');
 
-$notifier = new Notifier('travis.i.wyatt@gmail.com');
+$notifier = new Notifier('travis.i.wyatt@gmail.com', 'travis.i.wyatt@gmail.com');
 
 $test = array(
 	'Sect' => 1234,
