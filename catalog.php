@@ -39,7 +39,8 @@ class Catalog {
 		if ($div == null) {
 			echo "Data not found.\n";
 			//echo $this->response;
-			return false;
+			//return false;
+			throw new DataNotFoundException();
 		}
 		
 		$xpath = new DOMXPath($doc);
@@ -53,7 +54,8 @@ class Catalog {
 			$this->fields = $this->parseData($cells);
 		} else {
 			echo "Data header not found.\n";
-			return false;
+			//return false;
+			throw new HeaderNotFoundException();
 		}
 		
 		$results = array();
@@ -85,3 +87,6 @@ class Catalog {
 	}
 	
 }
+
+class DataNotFoundException extends Exception {}
+class HeaderNotFoundException extends DataNotFoundException {}
